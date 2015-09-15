@@ -3,5 +3,5 @@ start = 5
 while ended != 1:
     print("*" * start);
     start = start - 1
-    if start == 0:
+    if start == -1:
         ended = 1
