@@ -54,7 +54,7 @@ def Program():
         change_color_to(Blue)
     if x == 52:
         change_color_to(Green)
-    print("Press numbers 1 trough 4 to change colors\nWASD for movement")
+    
 
 run(Program)
 from End import *
