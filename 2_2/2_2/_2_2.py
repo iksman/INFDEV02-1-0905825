@@ -2,7 +2,7 @@
 enemyTurn = random.randint(1,3)
 print("RPSLS v1.0")
 while True:
-    yourTurn = input("Type: Rock, Paper, Scissors Lizard or Spock?> ")
+    yourTurn = raw_input("Type: Rock, Paper, Scissors Lizard or Spock?> ")
     if yourTurn == "Rock" or yourTurn == "rock":
         if (enemyTurn == 1):
             print("You tied, you both did the same move")
