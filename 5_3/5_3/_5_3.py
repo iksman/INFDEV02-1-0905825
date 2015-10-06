@@ -1,8 +1,8 @@
-import re
+﻿import re
 import sys
 while True:
   print("Cryptograph")  #a ascii = 97 | z ascii = 122 
-  stri = input("Text>") #A ascii = 65 | Z ascii = 90
+  stri = raw_input("Text>") #A ascii = 65 | Z ascii = 90
   shift = int(input("Shift letters by>"))
   length = len(stri)
   counter = 0

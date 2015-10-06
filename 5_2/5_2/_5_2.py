@@ -1,9 +1,9 @@
-import re
+﻿import re
 
 while True:
     def conNum(string):
         return any(i.isdigit() for i in string)
-    userPassword = input("Enter password>")
+    userPassword = raw_input("Enter password>")
     passwordPoints = 0
     length = len(userPassword)
     status = 0

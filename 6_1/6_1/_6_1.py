@@ -1,13 +1,7 @@
 ﻿import sys
 shape = raw_input("||1>A full square|| ||2>A hollow square|| ||3>A rectangle|| ||4>Isoceles||\nCommand>")
-if shape == "1" or shape == "2" or shape == "3" or shape == "4":
-    height = int(raw_input("height"))
-else:
-    height = 0
-if shape == "1" or shape == "2":
-    width = int(raw_input("width"))
-else:
-    width = 0
+height = int(raw_input("height"))
+width = height
 
 coolwidth = width - 1
 coollength = height - 1
@@ -18,20 +12,19 @@ i = 0
 counter = 0
 done = False
 if shape == "1":
-    while counter != height:
-        for x in range(0, width):
+    for i in range(height):
+        for x in range(height):
             result = result + "*"
         result = result + "\n"
-        counter = counter + 1
 elif shape == "2":
     while counter != lines:
         if counter == 0:
-            for x in range(0, width):
+            for x in range(width):
                 result = result + "*"
             result = result + "\n"
             counter = counter + 1
         elif counter == height:
-            for x in range(0, width):
+            for x in range(width):
                 result = result + "*"
             result = result + "\n"
             break
