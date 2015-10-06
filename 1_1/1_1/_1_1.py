@@ -5,3 +5,4 @@
         print "can't go below absolute zero"
     else:
         print("%.2f" % celcius)
+        break
