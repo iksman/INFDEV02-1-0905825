@@ -1,6 +1,6 @@
-import random
+﻿import random
 enemyTurn = random.randint(1,3)
-yourTurn = input("Type: Rock, Paper or Scissors ?> ")
+yourTurn = raw_input("Type: Rock, Paper or Scissors ?> ")
 if yourTurn == "Rock" or yourTurn == "rock":
     if (enemyTurn == 1):
         print("You tied, you both did the same move")
