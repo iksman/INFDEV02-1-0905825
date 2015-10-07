@@ -1,14 +1,13 @@
 ﻿import sys
-shape = raw_input("||1>A full square|| ||2>A hollow square|| ||3>A rectangle|| ||4>Isoceles||\nCommand>")
-height = int(raw_input("height"))
-width = height
+import math
+shape = raw_input("||1>A full square|| ||2>A hollow square|| ||3>A rectangle|| ||4>Isoceles|| ||5>A circle||\nCommand>")
+if shape == "1" or shape == "2" or shape == "3" or shape == "4":
+    height = int(raw_input("Height>"))
 
-coolwidth = width - 1
-coollength = height - 1
-lines = height + 1
+if shape == "5":
+    circum = int(raw_input("Circumference>"))
 result = ""
 x = 0
-i = 0
 counter = 0
 done = False
 if shape == "1":
@@ -17,20 +16,20 @@ if shape == "1":
             result = result + "*"
         result = result + "\n"
 elif shape == "2":
-    while counter != lines:
+    while counter != (height + 1):
         if counter == 0:
-            for x in range(width):
+            for x in range(height):
                 result = result + "*"
             result = result + "\n"
             counter = counter + 1
         elif counter == height:
-            for x in range(width):
+            for x in range(height):
                 result = result + "*"
             result = result + "\n"
             break
-        elif counter != coollength:
+        elif counter != height - 1:
             result = result + "*"
-            for x in range(1, coolwidth):
+            for x in range(1, height - 1):
                 result = result + " "
             result = result + "*"
             result = result + "\n"
@@ -39,7 +38,7 @@ elif shape == "2":
             counter = height
 elif shape == "3":
     counter = 1
-    while counter != lines:
+    while counter != height + 1:
         for x in range(0,counter):
             result = result + "*"
         result = result + "\n"
@@ -64,6 +63,14 @@ elif shape == "4":
         counter = counter + 1
         result = result + "\n"
         done = False
+elif shape == "5":
+    for i in range(-circum, circum + 1):
+        for j in range(-circum, circum + 1):
+            if math.sqrt((i**2)+(j**2)) <= circum + 0.2:
+                result = result + "*"
+            else:
+                result = result + " "
+        result = result + "\n"
 else:
-    print "I don't know what",shape,"means!"        
+    result = "I don't know what '" + shape + "' means!"      
 print result

@@ -23,4 +23,4 @@ elif yourTurn == "Scissors" or yourTurn == "paper":
     if (enemyTurn == 1):
         print("You lose, the enemy's rock crushed your scissors")
 else:
-    print("I don't know what",yourTurn,"means")
+    print "I don't know what '" + yourTurn + "'means"
